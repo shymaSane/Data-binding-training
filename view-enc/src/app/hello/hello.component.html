@@ -1,6 +1,9 @@
 <h1>Hello everyone!</h1>
 <br>
 <h3>{{message}}</h3>
+<label>Server Name 
+    <input type="text" #myInput>
+</label>
 
-<button (click) = "onClick()">Click</button>
+<button (click) = "onClick(myInput)">Click</button>
 <button [disabled] = "isDisabled">Changed</button>

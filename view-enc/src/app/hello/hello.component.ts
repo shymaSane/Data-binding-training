@@ -11,7 +11,8 @@ export class HelloComponent implements OnInit {
   message: string = "heyy im here again"
   isDisabled: boolean = false;
 
-  onClick(){
+  onClick(value){
+    console.log(value.value)
   this.isDisabled = true;
   }
 
