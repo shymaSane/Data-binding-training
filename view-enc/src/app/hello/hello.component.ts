@@ -1,4 +1,4 @@
-import { Component, OnInit,ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ViewChild, ElementRef  } from '@angular/core';
 
 @Component({
   selector: 'app-hello',
@@ -10,9 +10,10 @@ export class HelloComponent implements OnInit {
 
   message: string = "heyy im here again"
   isDisabled: boolean = false;
+  @ViewChild('localReference') localReference: ElementRef;
 
   onClick(value: HTMLInputElement){
-    console.log(value.value)
+    console.log(this.localReference.nativeElement.value)
   this.isDisabled = true;
   }
 
